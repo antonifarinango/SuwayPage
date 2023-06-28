@@ -1,0 +1,157 @@
+
+
+
+/*CONTENEDOR DE NAVEGACIÓN*/
+
+.containt-navegation {
+    display: flex;
+    align-items: center;
+  }
+  
+  /*CONTENEDOR DE NAVEGACIÓN ESTADO ACTIVO*/
+  
+  .containtActive {
+    height: 80vh;
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: end;
+    border-radius: 80px;
+    transition: 0.1s;
+  }
+  
+  /*MENU HAMBURGUER*/
+  
+  .menu-hamburguer {
+    width: 50px;
+    height: 4px;
+    background-color: var(--colorText);
+    transition: 0.8s;
+    border-radius: 10px;
+    z-index: 1;
+    margin-right: 40px;
+    cursor: pointer;
+  }
+  
+  .menu-hamburguer::before {
+    content: "";
+    width: 50%;
+    height: 4px;
+    background-color: var(--colorText);
+    position: relative;
+    transform: translateY(-12px);
+    display: flex;
+    transition: 0.8s;
+    border-radius: 10px;
+  }
+  .menu-hamburguer::after {
+    content: "";
+    width: 50%;
+    height: 4px;
+    background-color: var(--colorText);
+    position: relative;
+    transform: translateY(8px) translateX(25px);
+    display: flex;
+    transition: 0.8s;
+    border-radius: 10px;
+  }
+  
+  /*MENU HAMBURGUER ESTADO ACTIVO*/
+  
+  .active {
+    width: 40px;
+    height: 4px;
+    background-color: var(--colorPrincipal);
+    transition: 0.8s;
+    border-radius: 10px;
+    transform: translateX(5px) rotate(-45deg);
+    z-index: 1;
+    position: absolute;
+  }
+  
+  .active::before {
+    content: "";
+    width: 20px;
+    height: 4px;
+    background-color: var(--colorPrincipal);
+    transform: translateY(-10px) translateX(10px) rotate(-90deg);
+    display: flex;
+    transition: 0.8s;
+    border-radius: 10px;
+  }
+  .active::after {
+    content: "";
+    width: 20px;
+    height: 4px;
+    background-color: var(--colorPrincipal);
+    transform: translateY(7px) translateX(10px) rotate(90deg);
+    display: flex;
+    transition: 0.8s;
+    border-radius: 10px;
+  }
+  
+  /*LISTA DE NAVEGACIÓN*/
+  
+  .nav {
+    display: none;
+  }
+
+  .nav-pc{
+    display: none;
+  }
+  
+  /*LISTA DE NAVEGACIÓN ACTIVA*/
+  
+  .navActive {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 65%;
+    font-size: 20px;
+    gap: 20px;
+    cursor: pointer;
+  }
+  a{
+    text-decoration: none;
+    color: var(--colorPrincipal);
+  }
+  
+  
+  /*ADAPTACION PARA PC*/
+  
+  @media screen and (min-width: 600px) {
+    a {
+      display: flex;
+      text-decoration: none;
+    }
+    a:hover{
+      text-decoration: underline #000;
+    }
+    .menu-hamburguer {
+      display: none;
+    }
+    .nav-pc{
+      display:none;
+      padding-bottom: 10px;
+    }
+  }
+
+
+  /*TABLET*/
+  @media screen and (max-width: 1250px) {
+    nav {
+      margin-right: 0;
+      font-size: 20px;
+     display: flex;
+    }
+
+  }
+  

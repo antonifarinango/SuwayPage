@@ -1,0 +1,16 @@
+@media screen and (min-width:600px){
+  #root{
+      display:flex;
+      height: 100vh;
+      justify-content: center;
+  }
+}
+body{
+    background-color: var(--colorPrincipal);
+}
+hr{
+  background-color: var(--colorSecundario);
+  height: 1px;
+}
+
+  
